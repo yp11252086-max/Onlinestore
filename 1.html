@@ -75,4 +75,208 @@
 
         .product-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(139, 92, 2
+            box-shadow: 0 8px 25px rgba(139, 92, 246, 0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 180px;
+            background-color: #f0ebf7; /* Soft purple tint */
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+        }
+
+        .product-title {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            color: #2e1a47;
+        }
+
+        .product-price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #6d28d9;
+            margin-bottom: 15px;
+        }
+
+        .product-description {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 20px;
+            text-align: left; /* Makes descriptions easier to read */
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        /* Order Form Section */
+        .order-section {
+            background: #fff;
+            max-width: 600px;
+            margin: 60px auto 0 auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid #e1dbe9;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #2e1a47;
+        }
+
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus, 
+        .form-group select:focus, 
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #6d28d9;
+            box-shadow: 0 0 5px rgba(109, 40, 217, 0.2);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background-color: #6d28d9; /* Wizardly purple button */
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            width: 100%;
+            transition: background-color 0.2s;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #5b21b6;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px;
+            margin-top: 40px;
+            color: #777;
+            font-size: 0.85rem;
+            background-color: #e5e1ec;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>The Mystical Vault</h1>
+        <p>Authentic, charged crystals and enchanted artifacts for your journey.</p>
+    </header>
+
+    <div class="container">
+        
+        <h2 class="section-title">Magical Crystals & Artifacts</h2>
+        <div class="product-grid">
+            
+            <div class="product-card">
+                <div class="product-image">🔮</div>
+                <h3 class="product-title">Celestial Amethyst Sphere</h3>
+                <div class="product-price">$45.00</div>
+                <p class="product-description">
+                    <strong>Properties:</strong> Calm, Intuition, & Deep Sleep.<br><br>
+                    This deep purple Amethyst sphere has been polished to perfection. Place it on your nightstand to ward off bad dreams, enhance your natural intuition, and channel tranquil energy throughout your room.
+                </p>
+                <a href="#order-form" class="btn">Order Now</a>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">💎</div>
+                <h3 class="product-title">Raw Starlight Quartz</h3>
+                <div class="product-price">$38.00</div>
+                <p class="product-description">
+                    <strong>Properties:</strong> Amplification, Clarity, & Focus.<br><br>
+                    A beautiful, untouched cluster of Clear Quartz. Known as the "Master Healer," this crystal amplifies the magical properties of any other crystals nearby and clears away mental fog during intense study sessions.
+                </p>
+                <a href="#order-form" class="btn">Order Now</a>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">✨</div>
+                <h3 class="product-title">Solar Pyrite Cluster</h3>
+                <div class="product-price">$29.00</div>
+                <p class="product-description">
+                    <strong>Properties:</strong> Wealth, Protection, & Motivation.<br><br>
+                    Commonly known as "Fool's Gold," Pyrite is a powerful shield against negative energy. Its glittering, metallic structure stimulates a flow of wealth, good luck, and creative confidence to whoever keeps it close.
+                </p>
+                <a href="#order-form" class="btn">Order Now</a>
+            </div>
+
+        </div>
+
+        <div class="order-section" id="order-form">
+            <h2 class="section-title">Summon Your Order</h2>
+            
+            <form action="https://formspree.io/f/YOUR_UNIQUE_ID_HERE" method="POST">
+                
+                <div class="form-group">
+                    <label for="name">Your Full Name</label>
+                    <input type="text" id="name" name="customer_name" placeholder="Luna Lovegood" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="customer_email" placeholder="luna@hogwarts.edu" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="product">Select Your Artifact</label>
+                    <select id="product" name="ordered_product" required>
+                        <option value="" disabled selected>Choose a crystal...</option>
+                        <option value="Celestial Amethyst Sphere - $45.00">Celestial Amethyst Sphere - $45.00</option>
+                        <option value="Raw Starlight Quartz - $38.00">Raw Starlight Quartz - $38.00</option>
+                        <option value="Solar Pyrite Cluster - $29.00">Solar Pyrite Cluster - $29.00</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="quantity">Quantity</label>
+                    <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Special Requests or Intentions</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Let us know if you want your crystal charged under a specific lunar phase!"></textarea>
+                </div>
+
+                <input type="text" name="_gotcha" style="display:none">
+
+                <button type="submit" class="btn">Submit Order</button>
+            </form>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 The Mystical Vault. Built for learning web design.</p>
+    </footer>
+
+</body>
+</html>
